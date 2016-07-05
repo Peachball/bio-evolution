@@ -1,3 +1,4 @@
+package game;
 
 public abstract class Creature implements Comparable<Creature> {
 	int stat;
