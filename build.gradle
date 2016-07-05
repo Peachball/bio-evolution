@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+sourceSets{
+	main{
+		java{
+			srcDir 'src/'
+		}
+	}
+}
+
+jar {
+	baseName = 'bio-evolution'
+	version = '0.0.1'
+	manifest {
+		attributes(
+			'Class-Path': configurations.compile.collect { it.getName()
+}.join(' '),
+			'Main-Class': 'Program'
+		)
+	}
+}
